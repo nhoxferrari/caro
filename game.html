@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html>
+<style>
+td {
+	border: 1px solid black;
+	width: 20px;
+	height: 20px;
+	text-align: center;
+	font-weight: bold;
+}
+</style>
+
+<script src="jquery-3.1.0.min.js"></script>
+
+<script>
+var WIDTH = 10;
+
+var isX = true;
+
+var isOver = function() {
+	var tds = $('td');
+	
+	tds.length;
+	
+	var td = $(tds[1]).text();
+};
+
+$(function() {
+	$('td').click(function(event) {
+		var td = $(event.target);
+		
+		if (td.text() == 'X' || td.text() == 'O') return;
+		
+		var c;
+		if (isX) {
+			c = 'X';
+		} else {
+			c = 'O';
+		}
+		td.text(c);
+		
+		isX = !isX;
+	});
+});
+</script>
+
+<body>
+<h1> Welcome to Tic Tac Toe </h1>
+<table> 
+	<tr>
+		<td>X</td>
+		<td>O</td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+	</tr>
+	<tr>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+	</tr>
+	<tr>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+	</tr><tr>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+	</tr><tr>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+	</tr><tr>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+	</tr><tr>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+	</tr><tr>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+	</tr><tr>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+	</tr><tr>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+	</tr><tr>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+	</tr><tr>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+	</tr><tr>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+	</tr><tr>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+	</tr><tr>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+	</tr><tr>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+	</tr><tr>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+	</tr><tr>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+	</tr><tr>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+	</tr><tr>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+	</tr><tr>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+		<td>   </td>
+	</tr>
+</table>
+</body>
+</html>
